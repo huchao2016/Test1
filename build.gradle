@@ -1,0 +1,78 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.spotcheck.android"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'armeabi-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : "com.spotcheck.android",
+                JPUSH_APPKEY : "1eac30f6dbd5e59e9f015698", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    signingConfigs {
+        makerBusSignConfig {
+            storeFile file("package/spotcheck.jks")
+            storePassword "spotcheck123"
+            keyAlias "spotcheck"
+            keyPassword "spotcheck123"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    //Glide加载图片的工具
+    compile 'com.github.bumptech.glide:glide:3.5.2'
+    compile files('libs/butterknife-7.0.1.jar')
+    //时间地址选择
+    compile 'cn.qqtheme.framework:WheelPicker:latest.release'
+    compile 'com.alibaba:fastjson:1.1.46.android'
+    //侧滑删除的listview
+    //okhttp的工具库
+    compile 'com.zhy:okhttputils:2.6.2'
+    compile 'com.google.code.gson:gson:2.6.2'
+    //调用相机选择图片
+    compile 'me.iwf.photopicker:PhotoPicker:0.8.1@aar'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.github.bumptech.glide:glide:3.6.0'
+    compile files('libs/imageloder.jar')
+    //ViewPagerIndicator库
+    compile 'com.shizhefei:ViewPagerIndicator:1.1.2'
+    //极光推送
+    compile 'cn.jiguang:jpush:2.1.8'
+    compile files('libs/mta-sdk-1.6.2.jar')
+    compile files('libs/open_sdk_r5756.jar')
+    compile files('libs/SocialSDK_QQZone_3.jar')
+    compile files('libs/SocialSDK_WeiXin_1.jar')
+    compile files('libs/SocialSDK_WeiXin_2.jar')
+    //Zxing二维码      网址https://github.com/yipianfengye/android-zxingLibrary
+    compile project(':swipeMenuListView')
+    compile project(':lib-zxing')
+}
