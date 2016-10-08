@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gray"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/title_short" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/communication_title"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+        <TextView
+                android:id="@+id/tv_consult"
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:gravity="right|bottom"
+                android:text="我要咨询"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_gray"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_communi_all"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/communi_all_selected" />
+
+        <Button
+            android:id="@+id/btn_communi_me"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/communi_me_unselected" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+
+        <com.mojie.view.XListView
+            android:id="@+id/communi_all_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_gray"
+            android:divider="#00000000"
+            android:dividerHeight="2dp" />
+
+        <com.mojie.view.XListView
+            android:id="@+id/communi_me_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_gray"
+            android:divider="#00000000"
+            android:dividerHeight="2dp" />
+    </FrameLayout>
+
+</LinearLayout>

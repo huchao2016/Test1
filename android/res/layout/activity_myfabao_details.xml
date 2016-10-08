@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gray"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/title_short" >
+
+        <ImageView
+            android:id="@+id/btn_myfabao_details_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/back_btn"
+            android:clickable="true" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/myfabao_title"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_label" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="任务分类" />
+
+                <TextView
+                    android:id="@+id/tv_fabao_details_label"
+                    style="@style/mine_scrollview_textview_content" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_title" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="任务标题" />
+
+                <TextView
+                    android:id="@+id/tv_fabao_details_title"
+                    style="@style/mine_scrollview_textview_content" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_budget" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="任务预算" />
+
+                <TextView
+                    android:id="@+id/tv_fabao_details_budget"
+                    style="@style/mine_scrollview_textview_content" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_delivery" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="交付日期" />
+
+                <TextView
+                    android:id="@+id/tv_fabao_details_delivery"
+                    style="@style/mine_scrollview_textview_content" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_city" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="所在城市" />
+
+                <TextView
+                    android:id="@+id/tv_fabao_details_city"
+                    style="@style/mine_scrollview_textview_content" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" />
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_overview" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="任务概述" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <TextView
+                    android:id="@+id/tv_fabao_details_overview"
+                    style="@style/mine_scrollview_textview"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:minHeight="50dp"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" />
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_ziliao" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="任务需求资料" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ListView
+                    android:id="@+id/task_details_demand_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_gray"
+                    android:divider="#ffcccccc"
+                    android:dividerHeight="0.5dp" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" />
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_contact"
+                    android:visibility="gone" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:text="接包方联系方式"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_fabaofang" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="接包方" />
+
+                <TextView
+                    android:id="@+id/tv_fabao_details_jiebaofang"
+                    style="@style/mine_scrollview_textview_content" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_mobile" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="手机号码" />
+
+                <TextView
+                    android:id="@+id/tv_fabao_details_mobile"
+                    style="@style/mine_scrollview_textview_content" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_email" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="邮箱" />
+
+                <TextView
+                    android:id="@+id/tv_fabao_details_email"
+                    style="@style/mine_scrollview_textview_content" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_qq" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="QQ" />
+
+                <TextView
+                    android:id="@+id/tv_fabao_details_qq"
+                    style="@style/mine_scrollview_textview_content" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:id="@+id/layout_fabao_details_resume"
+                style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_myresume_experience" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="简历" />
+
+                <TextView style="@style/mine_scrollview_textview_content" />
+
+                <ImageView style="@style/mine_scrollview_imageview_right_arrow" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" />
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:layout_marginLeft="45dp"
+                    android:text="接包方报价" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_budget" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="任务报价" />
+
+                <TextView
+                    android:id="@+id/tv_fabao_details_price"
+                    style="@style/mine_scrollview_textview_content" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_delivery" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="承诺交付日期" />
+
+                <TextView
+                    android:id="@+id/tv_fabao_details_time"
+                    style="@style/mine_scrollview_textview_content" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" />
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_overview" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="竞标说明" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <TextView
+                    android:id="@+id/tv_task_details_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="45dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bao_pingjia_bg"
+                    android:gravity="left|top"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" />
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:layout_marginLeft="45dp"
+                    android:text="对接包方评价" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                style="@style/mine_scrollview_layout"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup_fabao_details_pingjia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radio_fabao_details_good"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="好评"
+                        android:textColor="#000000" />
+
+                    <RadioButton
+                        android:id="@+id/radio_fabao_details_middle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="中评"
+                        android:textColor="#000000" />
+
+                    <RadioButton
+                        android:id="@+id/radio_fabao_details_bad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="差评"
+                        android:textColor="#000000" />
+                </RadioGroup>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/mine_scrollview_layout"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/et_fabao_details_pingjia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginRight="45dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bao_pingjia_bg"
+                    android:ems="10"
+                    android:gravity="left|top"
+                    android:hint="请输入您的评价"
+                    android:inputType="textMultiLine"
+                    android:maxLines="6"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:textSize="14sp" >
+                </EditText>
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="45dip"
+                    android:layout_height="fill_parent" />
+
+                <Button
+                    android:id="@+id/btn_myfabao_details_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/submit" />
+
+                <View
+                    android:layout_width="45dip"
+                    android:layout_height="fill_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

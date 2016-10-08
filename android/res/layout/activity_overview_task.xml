@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gray"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/title_short" >
+
+        <ImageView
+            android:id="@+id/btn_overview_task_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/back_btn"
+            android:clickable="true" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/task_overview_title"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_label" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="任务分类" />
+
+                <TextView
+                    android:id="@+id/tv_overview_task_label"
+                    style="@style/mine_scrollview_textview_content" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_title" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="任务标题" />
+
+                <TextView
+                    android:id="@+id/tv_overview_task_title"
+                    style="@style/mine_scrollview_textview_content" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_budget" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="任务预算" />
+
+                <TextView
+                    android:id="@+id/tv_overview_task_budget"
+                    style="@style/mine_scrollview_textview_content" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_delivery" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="交付日期" />
+
+                <TextView
+                    android:id="@+id/tv_overview_task_delivery"
+                    style="@style/mine_scrollview_textview_content" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_city" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="所在城市" />
+
+                <TextView
+                    android:id="@+id/tv_overview_task_city"
+                    style="@style/mine_scrollview_textview_content" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" />
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_overview" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="任务概述" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <TextView
+                    android:id="@+id/tv_overview_task_overview"
+                    style="@style/mine_scrollview_textview"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="45dp"
+                    android:minHeight="50dp"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:id="@+id/layout_bidding"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <View style="@style/view_line" />
+
+                <LinearLayout style="@style/mine_scrollview_layout" >
+
+                    <TextView
+                        style="@style/mine_scrollview_textview"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="竞标者信息"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <View style="@style/view_line" />
+
+                <LinearLayout style="@style/mine_scrollview_layout" >
+
+                    <ListView
+                        android:id="@+id/overview_task_bidder_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_gray"
+                        android:divider="#ffcccccc"
+                        android:dividerHeight="0.5dp" />
+                </LinearLayout>
+
+                <View style="@style/view_line" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

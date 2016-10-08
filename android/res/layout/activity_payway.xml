@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/title_short" >
+
+        <ImageView
+            android:id="@+id/btn_payway_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/back_btn"
+            android:clickable="true" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/payway_title"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_alipay"
+        style="@style/mine_scrollview_layout" >
+
+        <ImageView
+            style="@style/mine_scrollview_image"
+            android:src="@drawable/icon_alipay" />
+
+        <TextView
+            style="@style/mine_scrollview_textview"
+            android:text="支付宝" />
+
+        <ImageView style="@style/mine_scrollview_imageview_right_arrow" />
+    </LinearLayout>
+
+    <View style="@style/view_line" />
+
+    <LinearLayout
+        android:id="@+id/layout_wechat"
+        style="@style/mine_scrollview_layout"
+        android:visibility="gone" >
+
+        <ImageView
+            style="@style/mine_scrollview_image"
+            android:src="@drawable/ic_weixin" />
+
+        <TextView
+            style="@style/mine_scrollview_textview"
+            android:text="微信支付" />
+
+        <ImageView style="@style/mine_scrollview_imageview_right_arrow" />
+    </LinearLayout>
+
+    <View
+        style="@style/view_line"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/layout_upacp"
+        style="@style/mine_scrollview_layout"
+        android:visibility="gone" >
+
+        <ImageView
+            style="@style/mine_scrollview_image"
+            android:src="@drawable/ic_yinlian" />
+
+        <TextView
+            style="@style/mine_scrollview_textview"
+            android:text="银联" />
+
+        <ImageView style="@style/mine_scrollview_imageview_right_arrow" />
+    </LinearLayout>
+
+    <View
+        style="@style/view_line"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/layout_bankcard"
+        style="@style/mine_scrollview_layout"
+        android:visibility="gone" >
+
+        <ImageView
+            style="@style/mine_scrollview_image"
+            android:src="@drawable/icon_mine_mobile" />
+
+        <TextView
+            style="@style/mine_scrollview_textview"
+            android:text="银行卡" />
+
+        <ImageView style="@style/mine_scrollview_imageview_right_arrow" />
+    </LinearLayout>
+
+    <View
+        style="@style/view_line"
+        android:visibility="gone" />
+
+</LinearLayout>

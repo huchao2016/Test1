@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:id="@+id/layout_project_item"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/tab_bg"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_label" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="项目名称" />
+
+                <TextView
+                    android:id="@+id/tv_project_name"
+                    style="@style/mine_scrollview_textview_content" />
+
+                <ImageView style="@style/mine_scrollview_imageview_right_arrow" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_delivery" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="开始时间" />
+
+                <TextView
+                    android:id="@+id/tv_project_start"
+                    style="@style/mine_scrollview_textview_content" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_delivery" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="完成时间" />
+
+                <TextView
+                    android:id="@+id/tv_project_finish"
+                    style="@style/mine_scrollview_textview_content" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_fabaofang" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="证明人" />
+
+                <TextView
+                    android:id="@+id/tv_project_reference_people"
+                    style="@style/mine_scrollview_textview_content" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_mobile" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="证明人电话" />
+
+                <TextView
+                    android:id="@+id/tv_project_reference_tel"
+                    style="@style/mine_scrollview_textview_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>

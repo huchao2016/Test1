@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/title_long"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+            
+            <ImageView
+                android:id="@+id/btn_register_back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/back_btn"
+                android:clickable="true" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/register_title"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+            
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+            <com.mojie.view.RoundedWebImageView
+                android:id="@+id/register_head"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/register_head" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/register_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="30dp" >
+
+            <EditText
+                android:id="@+id/register_name"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/input_bg"
+                android:hint="@string/register_username"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="10dp" >
+
+            <EditText
+                android:id="@+id/register_tel"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/input_bg"
+                android:hint="@string/register_tel"
+                android:inputType="number"
+                android:maxLength="11"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/register_code"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_weight="3"
+                android:background="@drawable/verification_border"
+                android:hint="@string/register_code"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="13dp" />
+
+            <View
+                android:layout_width="5dip"
+                android:layout_height="fill_parent"
+                android:background="#00FFFFFF" />
+
+            <Button
+                android:id="@+id/register_code_ibtn"
+                android:layout_width="120dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:text="获取验证码"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:background="@drawable/bg_send" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="10dp" >
+
+            <EditText
+                android:id="@+id/register_psw"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/input_bg"
+                android:hint="@string/register_pwd"
+                android:paddingLeft="5dp"
+                android:password="true"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="10dp" >
+
+            <EditText
+                android:id="@+id/register_psw_confirm"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/input_bg"
+                android:hint="@string/register_pwd_confirm"
+                android:paddingLeft="5dp"
+                android:password="true"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/register_checkBox_agree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/btn_check"
+                android:text="@string/register_checkBox_agree"
+                android:textColor="#000000"
+                android:textSize="13dp"/>
+            <TextView
+                android:id="@+id/tv_register_agreement"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/register_agreement"
+                android:textColor="#22A1FA"
+                android:textSize="13dp" />
+            
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="45dip"
+                android:layout_height="fill_parent" />
+
+            <Button
+                android:id="@+id/register_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/submit" />
+
+            <View
+                android:layout_width="45dip"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

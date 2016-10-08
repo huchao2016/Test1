@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gray"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="245dp"
+        android:background="@drawable/title_long"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="20dp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/mine_title"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_resume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="我的简历"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <com.mojie.view.RoundedWebImageView
+                android:id="@+id/img_mine_head"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/head_bg"
+                android:gravity="center"
+                android:src="@drawable/head" />
+
+            <TextView
+                android:id="@+id/mine_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:id="@+id/mine_user_jobtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textColor="#ffffff" />
+
+            <View
+                style="@style/view_line"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/layout_mine_bank_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/tv_mine_bank_card_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="银行卡"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_mine_wallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_mine_wallet_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="钱包余额"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layout_mine_vouchers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/tv_mine_vouchers_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="#ffffff" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="代金券余额"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/layout_mine_user"
+                style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_mine_user" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="实名认证" />
+
+                <TextView
+                    android:id="@+id/tv_mine_user_name"
+                    style="@style/mine_scrollview_textview_content" />
+
+                <ImageView style="@style/mine_scrollview_imageview_right_arrow" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:id="@+id/layout_mine_mobile"
+                style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_mine_mobile" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="手机认证" />
+
+                <TextView
+                    android:id="@+id/tv_mine_mobile"
+                    style="@style/mine_scrollview_textview_content" />
+
+                <ImageView style="@style/mine_scrollview_imageview_right_arrow" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" />
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:id="@+id/layout_mine_login_pwd"
+                style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_mine_loginpwd" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="登录密码" />
+
+                <TextView
+                    android:id="@+id/tv_mine_login_pwd"
+                    style="@style/mine_scrollview_textview_content" />
+
+                <ImageView style="@style/mine_scrollview_imageview_right_arrow" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:id="@+id/layout_mine_trading_pwd"
+                style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_mine_tradpwd" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="交易密码" />
+
+                <TextView
+                    android:id="@+id/tv_mine_trading_pwd"
+                    style="@style/mine_scrollview_textview_content" />
+
+                <ImageView style="@style/mine_scrollview_imageview_right_arrow" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" />
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:id="@+id/layout_mine_fabao"
+                style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_mine_fabao" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="我的发包" />
+
+                <TextView
+                    android:id="@+id/tv_mine_fabao"
+                    style="@style/mine_scrollview_textview_content" />
+
+                <ImageView style="@style/mine_scrollview_imageview_right_arrow" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:id="@+id/layout_mine_jiebao"
+                style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_mine_jiebao" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="我的接包" />
+
+                <TextView
+                    android:id="@+id/tv_mine_jiebao"
+                    style="@style/mine_scrollview_textview_content" />
+
+                <ImageView style="@style/mine_scrollview_imageview_right_arrow" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:id="@+id/layout_mine_consult"
+                style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_mine_consult" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="我的交流" />
+
+                <TextView
+                    android:id="@+id/tv_mine_consult"
+                    style="@style/mine_scrollview_textview_content" />
+
+                <ImageView style="@style/mine_scrollview_imageview_right_arrow" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:id="@+id/layout_mine_letter"
+                style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_mine_letter" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="我的站内信" />
+
+                <TextView
+                    android:id="@+id/tv_mine_letter"
+                    style="@style/mine_scrollview_textview_content" />
+
+                <ImageView style="@style/mine_scrollview_imageview_right_arrow" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" />
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:id="@+id/layout_mine_service"
+                style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_bao_contact" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="模界客服" />
+
+                <TextView
+                    android:id="@+id/tv_mine_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="32dp"
+                    android:textColor="#000000"
+                    android:textSize="13dp" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:id="@+id/layout_mine_about"
+                style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_mine_about" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="关于我们" />
+
+                <ImageView style="@style/mine_scrollview_imageview_right_arrow" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:id="@+id/layout_mine_help"
+                style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_mine_about" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="会员帮助" />
+
+                <ImageView style="@style/mine_scrollview_imageview_right_arrow" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:id="@+id/layout_mine_version"
+                style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_mine_version" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="系统版本" />
+
+                <TextView
+                    android:id="@+id/tv_mine_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="32dp"
+                    android:textColor="#000000"
+                    android:textSize="13dp" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="45dip"
+                    android:layout_height="fill_parent" />
+
+                <Button
+                    android:id="@+id/btn_mine_exit_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_exit_login" />
+
+                <View
+                    android:layout_width="45dip"
+                    android:layout_height="fill_parent" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

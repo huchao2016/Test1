@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/title_long"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+
+            <ImageView
+                android:id="@+id/prove_name_back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/back_btn"
+                android:clickable="true" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/prove_name_title"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <com.mojie.view.RoundedWebImageView
+                android:id="@+id/prove_name_head"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/head_bg"
+                android:src="@drawable/head" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/register_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="30dp" >
+
+            <EditText
+                android:id="@+id/prove_name_name"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/input_bg"
+                android:hint="@string/prove_name_name"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="10dp" >
+
+            <EditText
+                android:id="@+id/prove_name_id"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/input_bg"
+                android:hint="@string/prove_name_ID"
+                android:inputType="number"
+                android:maxLength="18"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textSize="13dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="45dip"
+                android:layout_height="fill_parent" />
+
+            <Button
+                android:id="@+id/btn_prove_name_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/submit" />
+
+            <View
+                android:layout_width="45dip"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

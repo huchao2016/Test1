@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gray"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:background="@drawable/title_long"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginTop="20dp" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/myresume_title"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/btn_myresume_back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/back_btn"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/tv_myresume_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="创建"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <com.mojie.view.RoundedWebImageView
+                android:id="@+id/img_myresume_head"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/head_bg"
+                android:gravity="center"
+                android:src="@drawable/head" />
+
+            <TextView
+                android:id="@+id/tv_myresume_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="STEVEN"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout style="@style/mine_scrollview_layout" >
+
+            <TextView
+                style="@style/mine_scrollview_textview"
+                android:layout_marginLeft="40dp"
+                android:text="创建时间" />
+
+            <TextView
+                android:id="@+id/tv_resume_add_time"
+                style="@style/mine_scrollview_textview_content"
+                android:layout_marginRight="40dp" />
+        </LinearLayout>
+
+        <View style="@style/view_line" />
+
+        <LinearLayout style="@style/mine_scrollview_layout" >
+
+            <TextView
+                style="@style/mine_scrollview_textview"
+                android:layout_marginLeft="40dp"
+                android:text="更新时间" />
+
+            <TextView
+                android:id="@+id/tv_resume_update_time"
+                style="@style/mine_scrollview_textview_content"
+                android:layout_marginRight="40dp" />
+        </LinearLayout>
+
+        <View style="@style/view_line" />
+
+        <LinearLayout style="@style/mine_scrollview_layout" >
+
+            <TextView
+                style="@style/mine_scrollview_textview"
+                android:layout_marginLeft="40dp"
+                android:text="完整度" />
+
+            <TextView
+                android:id="@+id/tv_resume_completion"
+                style="@style/mine_scrollview_textview_content"
+                android:layout_marginRight="40dp" />
+        </LinearLayout>
+
+        <View style="@style/view_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="45dip"
+                android:layout_height="fill_parent" />
+
+            <Button
+                android:id="@+id/btn_myresume_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/myresume_edit_btn" />
+
+            <View
+                android:layout_width="45dip"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="45dip"
+                android:layout_height="fill_parent" />
+
+            <Button
+                android:id="@+id/btn_myresume_preview"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/myresume_preview_btn" />
+
+            <View
+                android:layout_width="45dip"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

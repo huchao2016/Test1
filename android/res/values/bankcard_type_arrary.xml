@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="bankcard_type">
+        <item>储蓄卡</item>
+        <item>信用卡</item>
+    </string-array>
+
+</resources>

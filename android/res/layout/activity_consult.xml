@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/title_short" >
+
+        <ImageView
+            android:id="@+id/btn_consult_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/back_btn"
+            android:clickable="true" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/woyaozixun_title"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/layout_consult_expert"
+            style="@style/mine_scrollview_layout" >
+
+            <TextView
+                style="@style/mine_scrollview_textview"
+                android:layout_marginLeft="40dp"
+                android:text="选择专家" />
+
+            <TextView
+                android:id="@+id/tv_consult_expert_name"
+                style="@style/mine_scrollview_textview_content" />
+
+            <ImageView style="@style/mine_scrollview_imageview_right_arrow" />
+        </LinearLayout>
+
+        <View style="@style/view_line" />
+
+        <LinearLayout style="@style/mine_scrollview_layout" >
+
+            <TextView
+                style="@style/mine_scrollview_textview"
+                android:layout_marginLeft="40dp"
+                android:text="我的问题" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/mine_scrollview_layout" >
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="50dp" />
+
+            <EditText
+                android:id="@+id/et_consult_title"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/border"
+                android:hint="请输入标题"
+                android:paddingLeft="5dp"
+                android:singleLine="true"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="50dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/mine_scrollview_layout"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/et_consult_overview"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/bao_pingjia_bg"
+                android:ems="10"
+                android:gravity="left|top"
+                android:hint="请输入咨询内容"
+                android:inputType="textMultiLine"
+                android:maxLines="6"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:textSize="14sp" >
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="45dip"
+                android:layout_height="fill_parent" />
+
+            <Button
+                android:id="@+id/btn_consult_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/forget_submit" />
+
+            <View
+                android:layout_width="45dip"
+                android:layout_height="fill_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

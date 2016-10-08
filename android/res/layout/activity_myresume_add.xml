@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gray"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:background="@drawable/title_long"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" >
+
+            <ImageView
+                android:id="@+id/btn_myresume_add_back"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/back_btn"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/myresume_add_title"
+                android:layout_width="fill_parent"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/myresume_title"
+                android:textColor="#ffffff"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_myresume_add_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="保存"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <com.mojie.view.RoundedWebImageView
+                android:id="@+id/img_myresume_add_head"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/head_bg"
+                android:gravity="center"
+                android:src="@drawable/head" />
+
+            <TextView
+                android:id="@+id/tv_myresume_add_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_myresume_member_type" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="会员类型" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                style="@style/mine_scrollview_layout"
+                android:orientation="horizontal" >
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup_myresume_add_member_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radio_myresume_add_personal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="个人会员"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="50dp"
+                        android:layout_height="fill_parent" />
+
+                    <RadioButton
+                        android:id="@+id/radio_myresume_add_enterprise"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="企业会员"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </RadioGroup>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" />
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:id="@+id/layout_myresume_add_company"
+                style="@style/mine_scrollview_layout"
+                android:visibility="gone" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_myresume_company" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="企业名称" />
+
+                <EditText
+                    android:id="@+id/et_myresume_add_company"
+                    style="@style/resume_scrollview_edittext"
+                    android:hint="@string/myresume_add_company_hint"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_myresume_add_divider"
+                style="@style/view_line"
+                android:visibility="gone" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_myresume_contact" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="联系人" />
+
+                <EditText
+                    android:id="@+id/et_myresume_add_contact"
+                    style="@style/resume_scrollview_edittext"
+                    android:hint="@string/myresume_add_people_hint"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_myresume_mobile" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="联系手机" />
+
+                <EditText
+                    android:id="@+id/et_myresume_add_mobile"
+                    style="@style/resume_scrollview_edittext"
+                    android:hint="@string/myresume_add_mobile_hint"
+                    android:inputType="number"
+                    android:maxLength="11" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_myresume_qq" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="联系QQ" />
+
+                <EditText
+                    android:id="@+id/et_myresume_add_qq"
+                    style="@style/resume_scrollview_edittext"
+                    android:hint="@string/myresume_add_qq_hint"
+                    android:inputType="number"
+                    android:maxLength="10" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_myresume_email" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="E-mail" />
+
+                <EditText
+                    android:id="@+id/et_myresume_add_email"
+                    style="@style/resume_scrollview_edittext"
+                    android:hint="@string/myresume_add_email_hint"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_myresume_job" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="职业状态" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup_myresume_add_job_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="30dp"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/radio_myresume_add_job_on"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="在职"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="10dp"
+                        android:layout_height="fill_parent" />
+
+                    <RadioButton
+                        android:id="@+id/radio_myresume_add_job_dep"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="离职"
+                        android:textColor="#000000"
+                        android:textSize="14sp" />
+                </RadioGroup>
+
+                <EditText
+                    android:id="@+id/et_myresume_add_job"
+                    style="@style/resume_scrollview_edittext"
+                    android:hint="@string/myresume_add_job_hint"
+                    android:singleLine="true"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_myresume_experience" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="行业经验" />
+
+                <EditText
+                    android:id="@+id/et_myresume_add_experience"
+                    style="@style/resume_scrollview_edittext"
+                    android:hint="@string/myresume_add_experience_hint"
+                    android:singleLine="true"
+                    android:visibility="gone" />
+
+                <Spinner
+                    android:id="@+id/spinner_myresume_add_experience"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/verification_border"
+                    android:entries="@array/experience"
+                    android:prompt="@string/myresume_add_experience" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_myresume_address" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="通讯地址" />
+
+                <EditText
+                    android:id="@+id/et_myresume_add_address"
+                    style="@style/resume_scrollview_edittext"
+                    android:hint="@string/myresume_add_address_hint"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_myresume_id_number" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="证件号码" />
+
+                <EditText
+                    android:id="@+id/et_myresume_add_idnumber"
+                    style="@style/resume_scrollview_edittext"
+                    android:hint="@string/myresume_add_idnumber_hint"
+                    android:inputType="number"
+                    android:maxLength="18" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" />
+
+            <View style="@style/view_line" />
+
+            <LinearLayout style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_myresume_good" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="擅长项目" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                style="@style/mine_scrollview_layout"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp" >
+
+                <ListView
+                    android:id="@+id/myresume_add_good_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_gray"
+                    android:divider="#00000000"
+                    android:dividerHeight="5dp"
+                    android:listSelector="@android:color/transparent" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" />
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                android:id="@+id/layout_myresume_add_project_experience"
+                style="@style/mine_scrollview_layout" >
+
+                <ImageView
+                    style="@style/mine_scrollview_image"
+                    android:src="@drawable/icon_myresume_experience" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview"
+                    android:text="项目经验" />
+
+                <TextView
+                    style="@style/mine_scrollview_textview_content"
+                    android:text="编辑" />
+
+                <ImageView style="@style/mine_scrollview_imageview_right_arrow" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <LinearLayout
+                style="@style/mine_scrollview_layout"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/et_myresume_add_introduce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bao_pingjia_bg"
+                    android:ems="10"
+                    android:gravity="left|top"
+                    android:hint="请输入您的的简介"
+                    android:inputType="textMultiLine"
+                    android:maxLines="6"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingTop="3dp"
+                    android:textSize="14sp" >
+                </EditText>
+
+                <TextView
+                    style="@style/mine_scrollview_textview_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="25dp"
+                    android:text="填写完整资料，将提高您的接包成功率"
+                    android:textColor="#ffff0000" />
+            </LinearLayout>
+
+            <View style="@style/view_line" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <View
+                    android:layout_width="45dip"
+                    android:layout_height="fill_parent" />
+
+                <Button
+                    android:id="@+id/btn_myresume_add_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_save" />
+
+                <View
+                    android:layout_width="45dip"
+                    android:layout_height="fill_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
