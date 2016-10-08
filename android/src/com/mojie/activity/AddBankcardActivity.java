@@ -40,6 +40,7 @@ public class AddBankcardActivity extends Activity implements OnClickListener {
 	private SharedPreferences shared;
 	protected int id;
 	private ProgressDialog pd;
+	//sehishhdifhso
 	
 	private String URL_ADDBANKCARD = ConstUtils.BASEURL + "adduserbank.php";
 	protected int result;
